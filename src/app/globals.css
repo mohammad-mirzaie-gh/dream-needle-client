@@ -1,0 +1,346 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lalezarFont: var(--lalezarFont);
+  --font-shabnamFont: shabnam;
+
+  --color-backgroundColorTheme_1: var(--backgroundColorTheme_1);
+  --color-backgroundColorTheme_2: var(--backgroundColorTheme_2);
+  --color-textColorTheme: var(--textColorTheme);
+  --color-colorTheme: #2563eb;
+
+  --shadow-boxing: 0 0 7px #bbb;
+  --shadow-inputing: 0 0 1px #e2e2e2;
+  --shadow-ghost: 0 0 10px #ffffff7e;
+
+  --breakpoint-xs: 400px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-1\.4lg: 1124px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-2\.5xl: 1670px;
+  --breakpoint-3xl: 2000px;
+}
+
+@font-face {
+  font-family: shabnam;
+  src: url(./../../public/font/Shabnam-Medium-FD-WOL.ttf);
+}
+
+:root {
+  --backgroundColorTheme_1: white;
+  --backgroundColorTheme_2: #e6eeff;
+  --textColorTheme: #111;
+  --textParag : #294e7ba6;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--vazirFont);
+  outline: none;
+}
+
+select {
+  border: none;
+}
+
+p{
+  color: var(--textParag);
+}
+
+select {
+  appearance: none;
+  padding: 12px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.sidbar_panel::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8d8d8d;
+  height: 5px;
+  width: 5px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.loadingCircle {
+  animation: loading infinite;
+  animation-duration: 1s;
+  transition: all 1s;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(37, 99, 235) transparent transparent transparent;
+  border-width: 0.1em 0.1em 0 0;
+}
+
+.loadingCircleLoading {
+  animation: loading infinite;
+  animation-duration: 1s;
+  transition: all 1s;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(37, 99, 235) transparent transparent transparent;
+  border-width: 0.1em 0.1em 0 0;
+}
+.loadingCircleLoading_big {
+  animation: loading infinite;
+  animation-duration: 1s;
+  transition: all 1s;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(37, 99, 235) transparent transparent transparent;
+  border-width: 0.2em 0.2em 0 0;
+}
+.absoluteCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blur_backDrop {
+  backdrop-filter: blur(10px);
+}
+
+@keyframes loading {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.custom-table td {
+  padding: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  text-align: start;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #ffffff26;
+}
+
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.tree {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.tree li {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.tree li:hover {
+  color: #0070f3;
+  font-weight: bold;
+}
+
+.tree ul {
+  margin-top: 5px;
+  border-right: 1px dotted #ccc;
+  padding-right: 10px;
+}
+
+.MuiPaper-root {
+  background-color: var(--backgroundColorTheme_2) !important;
+  color: var(--textColorTheme) !important;
+  font-weight: bolder !important;
+}
+
+
+.MuiSelect-root,
+.MuiOutlinedInput-root {
+  background-color: var(--backgroundColorTheme_2) !important;
+  color: var(--textColorTheme) !important;
+  font-weight: bolder !important;
+}
+
+.MuiTypography-root,
+.MuiButton-root,
+.MuiChip-root,
+.MuiSelect-root,
+.MuiMenuItem-root,
+.MuiOutlinedInput-root {
+  font-family: var(--vazirFont) !important;
+  text-align: right !important;
+}
+
+.MuiMenuItem-root {
+  background-color: var(--backgroundColorTheme_2) !important;
+  color: var(--textColorTheme) !important;
+  font-weight: bolder !important;
+}
+.MuiInputLabel-root {
+  color: var(--textColorTheme) !important;
+  font-weight: bolder !important;
+  text-align: start;
+}
+.notranslate {
+  color: var(--textColorTheme) !important;
+  font-weight: bolder !important;
+}
+.MuiChip-root {
+  background-color: var(--backgroundColorTheme_1) !important;
+  color: var(--textColorTheme) !important;
+  font-weight: bolder !important;
+}
+.Mui-selected {
+  background-color: var(--backgroundColorTheme_1) !important;
+}
+.ck{
+  background-color: var(--backgroundColorTheme_2) !important;
+  color:var(--textColorTheme) !important;
+}
+.ck.ck-content {
+  font-family: "Vazirmatn", Tahoma, Arial, sans-serif !important;
+  direction: rtl;
+  text-align: right;
+  background-color: var(--backgroundColorTheme_2) !important;
+  border-radius: 8px;
+  padding: 15px;
+}
+.product-gallery-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-swiper {
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.main-swiper .main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumbnail-swiper {
+  height: 100px;
+}
+
+.thumbnail-swiper .thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.thumbnail-swiper .thumbnail-image:hover {
+  opacity: 1;
+}
+
+.image-zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.zoom-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.zoomed-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.zoom-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* استایل‌های پینج دایره‌ای */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #3b82f6; /* رنگ آبی */
+}
+
+/* بهبود ظاهر نویگیشن */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3b82f6;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
